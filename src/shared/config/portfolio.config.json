@@ -1,6 +1,6 @@
 {
     "meta": {
-        "name": "Sooraj Krishnakumar",
+        "name": "Sooraj Krishna kumar",
         "role": "Senior Backend Engineer",
         "headline": "Architecting Scalable Distributed Systems | .NET & Azure Expert",
         "location": "London, UK",
@@ -25,23 +25,60 @@
         "categories": [
             {
                 "label": "Languages & Frameworks",
-                "items": ["C#", ".NET 8", "ASP.NET Core", "Node.js", "TypeScript", "Go", "Python"]
+                "items": [
+                    "C#",
+                    ".NET 8",
+                    "ASP.NET Core",
+                    "Node.js",
+                    "TypeScript",
+                    "Go",
+                    "Python"
+                ]
             },
             {
                 "label": "Cloud & DevOps",
-                "items": ["Azure", "AWS", "Docker", "Kubernetes", "Terraform", "Azure DevOps", "GitHub Actions"]
+                "items": [
+                    "Azure",
+                    "AWS",
+                    "Docker",
+                    "Kubernetes",
+                    "Terraform",
+                    "Azure DevOps",
+                    "GitHub Actions"
+                ]
             },
             {
                 "label": "Databases & Storage",
-                "items": ["SQL Server", "PostgreSQL", "Redis", "Cosmos DB", "MongoDB", "Elasticsearch"]
+                "items": [
+                    "SQL Server",
+                    "PostgreSQL",
+                    "Redis",
+                    "Cosmos DB",
+                    "MongoDB",
+                    "Elasticsearch"
+                ]
             },
             {
                 "label": "Architecture & Patterns",
-                "items": ["Microservices", "Event-Driven Architecture", "CQRS", "DDD", "Clean Architecture", "REST", "gRPC", "GraphQL"]
+                "items": [
+                    "Microservices",
+                    "Event-Driven Architecture",
+                    "CQRS",
+                    "DDD",
+                    "Clean Architecture",
+                    "REST",
+                    "gRPC",
+                    "GraphQL"
+                ]
             },
             {
                 "label": "Messaging & Streaming",
-                "items": ["Kafka", "RabbitMQ", "Azure Service Bus", "Event Hubs"]
+                "items": [
+                    "Kafka",
+                    "RabbitMQ",
+                    "Azure Service Bus",
+                    "Event Hubs"
+                ]
             }
         ]
     },
@@ -75,7 +112,12 @@
         {
             "name": "Distributed Event Bus Platform",
             "role": "Lead Architect",
-            "stack": [".NET 8", "Azure Service Bus", "Docker", "OpenTelemetry"],
+            "stack": [
+                ".NET 8",
+                "Azure Service Bus",
+                "Docker",
+                "OpenTelemetry"
+            ],
             "summary": "A centralized event bus framework for internal microservices communication, ensuring reliable message delivery and distributed tracing.",
             "highlights": [
                 "Implemented the Outbox pattern to guarantee data consistency across services.",
@@ -88,7 +130,12 @@
         {
             "name": "Real-time Inventory Sync",
             "role": "Backend Developer",
-            "stack": ["Go", "Kafka", "Redis", "PostgreSQL"],
+            "stack": [
+                "Go",
+                "Kafka",
+                "Redis",
+                "PostgreSQL"
+            ],
             "summary": "High-performance inventory synchronization service connecting multiple e-commerce channels in real-time.",
             "highlights": [
                 "Built a Kafka consumer group to process inventory updates with sub-second latency.",
@@ -101,7 +148,12 @@
         {
             "name": "AuthZ Provider Service",
             "role": "Security Engineer",
-            "stack": ["IdentityServer4", "ASP.NET Core", "OAuth2", "OIDC"],
+            "stack": [
+                "IdentityServer4",
+                "ASP.NET Core",
+                "OAuth2",
+                "OIDC"
+            ],
             "summary": "Centralized authentication and authorization server supporting SSO for multiple enterprise applications.",
             "highlights": [
                 "Implemented custom grant types for legacy system integration.",
