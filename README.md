@@ -1,73 +1,84 @@
-# React + TypeScript + Vite
+# Sooraj's Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-performance, backend-focused developer portfolio built with **React**, **Tailwind CSS**, and **shadcn/ui**. It features a unique **"Git-as-Backend"** content management system, allowing the owner to edit the portfolio configuration directly from the live website by committing changes to GitHub.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   **Backend-First Design**: Aesthetic tailored for backend engineers (.NET/Azure theme).
+-   **Live Config Editor**: Edit your portfolio data (experience, projects, skills) directly on the live site.
+-   **Git-as-Backend**: Changes made in the editor are committed directly to your GitHub repository—no database required.
+-   **Type-Safe Configuration**: All data is validated against a Zod schema.
+-   **Responsive & Accessible**: Built with shadcn/ui and Tailwind CSS.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+-   **Framework**: React + Vite
+-   **Styling**: Tailwind CSS v4 + shadcn/ui
+-   **State Management**: Zustand (with persistence)
+-   **Icons**: Lucide React
+-   **API Integration**: Octokit (GitHub REST API)
 
-## Expanding the ESLint configuration
+## 📦 Installation & Setup
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/tijo-thomaz/sooraj-portfolio.git
+    cd sooraj-portfolio
+    ```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+2.  **Install dependencies**
+    ```bash
+    pnpm install
+    ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+3.  **Run the development server**
+    ```bash
+    pnpm dev
+    ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🔐 How to Edit Content (CMS Mode)
+
+This portfolio includes a built-in editor that allows you to update your information without touching code.
+
+1.  **Go to the Footer**: Scroll to the bottom of the page.
+2.  **Click the Lock Icon**: Locate the small lock icon near the social links.
+3.  **Authenticate**:
+    *   **Token**: Enter a **GitHub Personal Access Token (PAT)**.
+        *   *Note*: The token must have `repo` (or specifically `Contents: Read & Write`) permissions.
+    *   **Owner**: Enter the repository owner (e.g., `tijo-thomaz`).
+    *   **Repo**: Enter the repository name (e.g., `sooraj-portfolio`).
+4.  **Edit**: Click "Connect", then use the **Terminal** button (bottom-right) to open the editor.
+5.  **Apply**: Click "Apply" to commit your changes to GitHub. The site will automatically rebuild and update in a few minutes (depending on your hosting provider).
+
+## 📂 Project Structure
+
+```
+src/
+├── shared/
+│   └── config/
+│       ├── portfolio.config.json  <-- The Source of Truth
+│       ├── schema.ts              <-- Zod Validation Schema
+│       └── store.ts               <-- Zustand Store & GitHub Logic
+├── widgets/                       <-- Feature Sections
+│   ├── hero/
+│   ├── skills/
+│   ├── experience/
+│   ├── projects/
+│   ├── config-editor/             <-- The CMS Component
+│   └── footer/
+└── pages/
+    └── home/
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚢 Deployment
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This project is optimized for **Vercel** or **Netlify**.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1.  Push your code to GitHub.
+2.  Import the project into Vercel.
+3.  The build command is `pnpm run build`.
+4.  **No Environment Variables needed**: The admin authentication happens client-side via the user's own GitHub Token.
+
+## 📄 License
+
+MIT
