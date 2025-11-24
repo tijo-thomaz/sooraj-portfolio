@@ -124,6 +124,7 @@
                 "Integrated OpenTelemetry for end-to-end distributed tracing and observability.",
                 "Reduced inter-service coupling and improved system resilience."
             ],
+            "github": "https://github.com/example/event-bus",
             "demo": null
         },
         {
