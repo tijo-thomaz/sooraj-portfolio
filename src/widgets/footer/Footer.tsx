@@ -6,7 +6,7 @@ import { toast } from "sonner";
 
 export const Footer = () => {
   const { config, isAuthenticated, login, logout } = useConfigStore();
-  const { meta } = config;
+  const { meta, footer } = config;
   const currentYear = new Date().getFullYear();
   
   const [showAuth, setShowAuth] = useState(false);
@@ -32,29 +32,36 @@ export const Footer = () => {
       toast.info("Admin session ended");
   }
 
+  // Fallback if footer config is missing (backward compatibility)
+  const footerData = footer || {
+      copyright: meta.name,
+      tagline: "Built with React, Tailwind, and .NET Zen.",
+      links: [
+          { label: "LinkedIn", href: meta.linkedin },
+          { label: "Email", href: `mailto:${meta.email}` }
+      ]
+  };
+
   return (
     <footer className="border-t border-slate-800 bg-slate-950 py-8 mt-16">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
         <div className="text-slate-400 text-sm text-center md:text-left">
-          <p>© {currentYear} {meta.name}. All rights reserved.</p>
-          <p className="text-slate-600 text-xs mt-1">Built with React, Tailwind, and .NET Zen.</p>
+          <p>© {currentYear} {footerData.copyright}. All rights reserved.</p>
+          <p className="text-slate-600 text-xs mt-1">{footerData.tagline}</p>
         </div>
 
         <div className="flex items-center gap-6">
-           <a 
-             href={meta.linkedin} 
-             target="_blank" 
-             rel="noopener noreferrer"
-             className="text-slate-400 hover:text-primary transition-colors text-sm"
-           >
-             LinkedIn
-           </a>
-           <a 
-             href={`mailto:${meta.email}`} 
-             className="text-slate-400 hover:text-primary transition-colors text-sm"
-           >
-             Email
-           </a>
+           {footerData.links.map((link) => (
+               <a 
+                 key={link.label}
+                 href={link.href} 
+                 target={link.href.startsWith("mailto") ? undefined : "_blank"}
+                 rel={link.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
+                 className="text-slate-400 hover:text-primary transition-colors text-sm"
+               >
+                 {link.label}
+               </a>
+           ))}
 
            {/* Admin Trigger */}
            <div className="relative">

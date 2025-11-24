@@ -54,6 +54,14 @@ export const portfolioConfigSchema = z.object({
             to: z.string(),
         })
     ),
+    footer: z.object({
+        copyright: z.string(),
+        tagline: z.string(),
+        links: z.array(z.object({
+            label: z.string(),
+            href: z.string().url(),
+        })),
+    }).optional(),
     contact: z.object({
         showForm: z.boolean(),
         emailTo: z.string().email(),

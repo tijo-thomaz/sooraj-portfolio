@@ -165,6 +165,20 @@
         }
     ],
     "education": [],
+    "footer": {
+        "copyright": "Sooraj Krishnakumar",
+        "tagline": "Built with React, Tailwind, and .NET Zen.",
+        "links": [
+            {
+                "label": "LinkedIn",
+                "href": "https://www.linkedin.com/in/krishnakumarsooraj7"
+            },
+            {
+                "label": "GitHub",
+                "href": "https://github.com/"
+            }
+        ]
+    },
     "contact": {
         "showForm": true,
         "emailTo": "krishnakumarsooraj7@gmail.com"
