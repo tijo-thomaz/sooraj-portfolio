@@ -1,6 +1,6 @@
 {
     "meta": {
-        "name": "Sooraj Krishna kumar",
+        "name": "Sooraj Krishn akumar",
         "role": "Senior Backend Engineer",
         "headline": "Architecting Scalable Distributed Systems | .NET & Azure Expert",
         "location": "London, UK",
@@ -124,7 +124,6 @@
                 "Integrated OpenTelemetry for end-to-end distributed tracing and observability.",
                 "Reduced inter-service coupling and improved system resilience."
             ],
-            "github": "https://github.com/example/event-bus",
             "demo": null
         },
         {
