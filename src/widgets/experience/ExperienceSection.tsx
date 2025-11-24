@@ -1,21 +1,33 @@
 import { useConfigStore } from "@shared/config/store";
 import { Card } from "@ui/card";
+import { motion } from "framer-motion";
+import { containerVariants, itemVariants } from "@/lib/animations";
 
 export const ExperienceSection = () => {
   const { config } = useConfigStore();
   const { experience } = config;
 
   return (
-    <section id="experience" className="space-y-8 py-8">
-      <h2 className="text-2xl sm:text-3xl font-bold tracking-tight animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100 fill-mode-backwards">
+    <motion.section 
+      id="experience" 
+      className="space-y-8 py-8"
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+    >
+      <motion.h2 
+        variants={itemVariants}
+        className="text-2xl sm:text-3xl font-bold tracking-tight"
+      >
         Professional Journey
-      </h2>
+      </motion.h2>
       <div className="relative border-l-2 border-slate-800 ml-3 sm:ml-4 space-y-8 sm:space-y-12">
-        {experience.map((job, index) => (
-          <div 
+        {experience.map((job) => (
+          <motion.div 
             key={`${job.company}-${job.from}`} 
-            className="relative pl-6 sm:pl-8 animate-in fade-in slide-in-from-bottom-4 fill-mode-backwards"
-            style={{ animationDelay: `${(index + 2) * 150}ms`, animationDuration: '700ms' }}
+            variants={itemVariants}
+            className="relative pl-6 sm:pl-8"
           >
             {/* Timeline dot */}
             <div className="absolute -left-[5px] top-2 size-2.5 rounded-full bg-primary ring-4 ring-slate-950" />
@@ -45,9 +57,9 @@ export const ExperienceSection = () => {
                 ))}
               </ul>
             </Card>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
