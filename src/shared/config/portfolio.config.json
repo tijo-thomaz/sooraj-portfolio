@@ -1,9 +1,9 @@
 {
     "meta": {
         "name": "Sooraj Krishnakumar",
-        "role": "Senior Backend Engineer",
+        "role": "Software Developer",
         "headline": "Architecting Scalable Distributed Systems | .NET & Azure Expert",
-        "location": "London, UK",
+        "location": "Manchester, M22 4GQ",
         "shortIntro": "I specialize in building high-performance, resilient microservices architectures. With deep expertise in .NET, Azure, and event-driven patterns, I turn complex business requirements into robust technical solutions.",
         "profileImage": "",
         "linkedin": "https://www.linkedin.com/in/krishnakumarsooraj7",
@@ -29,7 +29,6 @@
                     "C#",
                     ".NET 8",
                     "ASP.NET Core",
-                    "Node.js",
                     "TypeScript",
                     "Go",
                     "Python"
@@ -39,10 +38,6 @@
                 "label": "Cloud & DevOps",
                 "items": [
                     "Azure",
-                    "AWS",
-                    "Docker",
-                    "Kubernetes",
-                    "Terraform",
                     "Azure DevOps",
                     "GitHub Actions"
                 ]
@@ -52,9 +47,6 @@
                 "items": [
                     "SQL Server",
                     "PostgreSQL",
-                    "Redis",
-                    "Cosmos DB",
-                    "MongoDB",
                     "Elasticsearch"
                 ]
             },
@@ -63,11 +55,7 @@
                 "items": [
                     "Microservices",
                     "Event-Driven Architecture",
-                    "CQRS",
-                    "DDD",
-                    "Clean Architecture",
                     "REST",
-                    "gRPC",
                     "GraphQL"
                 ]
             },
@@ -84,83 +72,158 @@
     },
     "experience": [
         {
-            "company": "TechFin Solutions",
-            "title": "Senior Backend Engineer",
-            "location": "London, UK",
-            "from": "2021-01",
+            "company": "Bet365",
+            "title": "Software Developer",
+            "location": "Manchester, UK",
+            "from": "2024-06",
             "to": "Present",
             "bullets": [
-                "Led the migration of a monolithic legacy banking system to a microservices architecture using .NET 6 and Azure Kubernetes Service (AKS), reducing deployment time by 70%.",
-                "Designed and implemented a high-throughput payment processing engine utilizing Azure Service Bus and Redis, handling over 500 transactions per second.",
-                "Mentored a team of 5 developers on Clean Architecture principles and Test-Driven Development (TDD)."
+                "Designed and implemented microservices using .NET 6 and C#, ensuring scalability and high availability.",
+                "Contributed to building a betting platform with .NET, Go, and TypeScript, delivering reliable features.",
+                "Applied Kafka to build an event-driven architecture, streamlining communication between distributed services.",
+                "Implemented unit testing (xUnit) to improve software reliability and maintainability.",
+                "Set up and maintained CI/CD pipelines via Jenkins and GitLab, deploying services to GCP for reliable web hosting.",
+                "Participated in Agile sprints and code reviews to maintain code quality and team collaboration."
             ]
         },
         {
-            "company": "CloudScale Systems",
+            "company": "Kindertons Accident Management",
             "title": "Software Developer",
-            "location": "London, UK",
-            "from": "2018-06",
-            "to": "2020-12",
+            "location": "Crew, UK",
+            "from": "2023-05",
+            "to": "2024-04",
             "bullets": [
-                "Developed and maintained RESTful APIs for a global logistics platform using ASP.NET Core.",
-                "Optimized SQL Server database queries, improving report generation speed by 40%.",
-                "Implemented CI/CD pipelines using Azure DevOps, automating testing and deployment processes."
+                "Developed and maintained micro services using .NET Core.",
+                "Integrated Azure Service Bus for message queuing and event-driven architecture, enabling seamless communication between microservices.",
+                "Worked in Microsoft Azure, for deploying and managing .NET applications.",
+                "Deployed and managed .NET applications on Microsoft Azure, leveraging Azure services such as Azure DevOps for CI/CD pipelines and Azure App Service for scalable web hosting.",
+                "Utilized Azure Functions and App Services to build and deploy serverless and cloud-native applications.",
+                "Worked in an Agile environment, participating in daily stand-ups, sprint planning, and retrospectives to ensure smooth project execution and timely delivery."
+            ]
+        },
+        {
+            "company": "Gadgeon Smart Systems Inc (Client – KORE Wireless)",
+            "title": "Senior Software Engineer",
+            "location": "Kochi, India",
+            "from": "2021-10",
+            "to": "2022-12",
+            "bullets": [
+                "Worked on a position tracking application as a .NET backend developer",
+                "Utilized Kafka for building message stream architectures, enabling real-time data processing and event-driven communication between microservices.",
+                "Implemented unit testing to ensure code quality and maintainability, resulting in a reduction in bugs and increased software reliability.",
+                "Integrated Elastic Search into existing systems to enable fast and accurate search functionalities, improving user experience and data accessibility.",
+                "Followed SOLID principles and clean coding practices to develop maintainable and modular backend services."
+            ]
+        },
+        {
+            "company": "E-Team (Client - Wipro Ltd, Project – ICICI Bank)",
+            "title": "Dot Net Developer",
+            "location": "Mumbai, India",
+            "from": "2020-01",
+            "to": "2021-10",
+            "bullets": [
+                "Worked on banking application as a full stack Asp.net core project.",
+                "Worked with project managers, developers and quality assurance to resolve technical issues.",
+                "Tested troubleshooting methods, devised innovative solutions, and documented resolutions for inclusion in knowledge base for support team use.",
+                "Single sign in functionality, collaborating with another in house project to fetch users details as per in ICICI employee database."
+            ]
+        },
+        {
+            "company": "C-MOTS Internet Technologies",
+            "title": "Software Developer",
+            "location": "Mumbai, India",
+            "from": "2017-12",
+            "to": "2020-01",
+            "bullets": [
+                "Analysed requirements and designed, developed and implemented software applications for multiple websites.",
+                "Collaborated on all stages of systems development lifecycle, from requirement gathering to production releases.",
+                "Built, tested and deployed scalable, highly available and modular software products.",
+                "Evaluated project requirements and specifications and developed software applications that surpassed client expectations."
             ]
         }
     ],
     "projects": [
         {
-            "name": "Distributed Event Bus Platform",
-            "role": "Lead Architect",
+            "name": "Verification Tool",
+            "role": "Full Stack Developer",
             "stack": [
-                ".NET 8",
-                "Azure Service Bus",
-                "Docker",
-                "OpenTelemetry"
+                ".NET 6",
+                "Kafka",
+                "Typescript",
+                "Go",
+                "Google Cloud Platform"
             ],
-            "summary": "A centralized event bus framework for internal microservices communication, ensuring reliable message delivery and distributed tracing.",
+            "summary": "Worked on the backend of a verification application for a betting company, developing key features and integrations.",
             "highlights": [
-                "Implemented the Outbox pattern to guarantee data consistency across services.",
-                "Integrated OpenTelemetry for end-to-end distributed tracing and observability.",
-                "Reduced inter-service coupling and improved system resilience."
+                "Designed and implemented microservices using .NET 6 and C#, ensuring scalability and high availability.",
+                "Contributed to building a betting platform with .NET, Go, and TypeScript, delivering reliable features.",
+                "Applied Kafka to build an event-driven architecture, streamlining communication between distributed services."
             ],
-            "github": "https://github.com/example/event-bus",
+            "github": "https://github.com/sooraj23",
             "demo": null
         },
         {
-            "name": "Real-time Inventory Sync",
+            "name": "Shopping Cart",
+            "role": "Full Stack Developer",
+            "stack": [
+                ".NET 6",
+                "SQL Server",
+                "Azure Service Bus",
+                "Azure",
+                "Ocelot Gateway",
+                "RabbitMQ",
+                "JavaScript"
+            ],
+            "summary": "Developed a scalable cloud kitchen platform using ASP.NET Core microservices with .NET 8, Integrated Azure services, RabbitMQ, Stripe Payments and Ocelot gateway to optimize ordering",
+            "highlights": [
+                "Implemented distributed microservices using ASP.NET Core and Ocelot API Gateway, enabling seamless routing, authentication, and secure communication between services.",
+                "Integrated Azure Service Bus and RabbitMQ for reliable event-driven communication, ensuring smooth order processing and real-time kitchen updates.",
+                "Designed a robust payment workflow with Stripe integration and SQL Server transactions, supporting high-volume order handling for the cloud-kitchen platform."
+            ],
+            "github": "https://github.com/sooraj23",
+            "demo": null
+        },
+        {
+            "name": "Fleet Management System",
+            "role": "CRM and .Net Developer.",
+            "stack": [
+                "Dynamics 365",
+                "Power BI",
+                "ASP.NET Core",
+                "LINQ",
+                "SQL Server",
+                "Dataverse",
+                "Azure Service Bus",
+                "Azure Functions"
+            ],
+            "summary": "Developed and customized model-driven and canvas apps using Power Apps. Integrated Power Automate to automate workflows and business process.",
+            "highlights": [
+                "Deployed and managed .NET applications on Microsoft Azure, leveraging Azure services such as Azure DevOps for CI/CD pipelines and Azure App Service for scalable web hosting.",
+                "Utilized Azure Functions and App Services to build and deploy serverless and cloud-native applications.",
+                "Integrated Azure Service Bus for message queuing and event-driven architecture, enabling seamless communication between microservices."
+            ],
+            "github": "https://github.com/sooraj23",
+            "demo": null
+        },
+        {
+            "name": "Position Logic",
             "role": "Backend Developer",
             "stack": [
-                "Go",
-                "Kafka",
-                "Redis",
-                "PostgreSQL"
-            ],
-            "summary": "High-performance inventory synchronization service connecting multiple e-commerce channels in real-time.",
-            "highlights": [
-                "Built a Kafka consumer group to process inventory updates with sub-second latency.",
-                "Utilized Redis for deduplication and caching hot data.",
-                "Scaled to handle peak loads during Black Friday sales events."
-            ],
-            "github": "https://github.com/example/inventory-sync",
-            "demo": null
-        },
-        {
-            "name": "AuthZ Provider Service",
-            "role": "Security Engineer",
-            "stack": [
-                "IdentityServer4",
                 "ASP.NET Core",
-                "OAuth2",
-                "OIDC"
+                "LINQ",
+                "SQL Server",
+                "Kafka",
+                "Elastic Search",
+                "Click House",
+                "Cassandra"
             ],
-            "summary": "Centralized authentication and authorization server supporting SSO for multiple enterprise applications.",
+            "summary": "Worked on the backend of a position tracking application developing",
             "highlights": [
-                "Implemented custom grant types for legacy system integration.",
-                "Secured APIs using JWT bearer tokens and fine-grained policies.",
-                "Migrated 50,000+ users from legacy databases with zero downtime."
+                "Utilized Kafka for building message stream architectures, enabling real-time data processing and event-driven communication between microservices.",
+                "Implemented unit testing to ensure code quality and maintainability, resulting in a reduction in bugs and increased software reliability.",
+                "Integrated Elastic Search into existing systems to enable fast and accurate search functionalities, improving user experience and data accessibility."
             ],
-            "github": null,
+            "github": "https://github.com/sooraj23",
             "demo": null
         }
     ],
@@ -175,7 +238,7 @@
             },
             {
                 "label": "GitHub",
-                "href": "https://github.com/"
+                "href": "https://github.com/sooraj23"
             }
         ]
     },
